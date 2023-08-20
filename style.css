@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Alumni+Sans+Pinstripe:ital@0;1&family=Cinzel+Decorative:wght@400;700;900&family=DynaPuff:wght@400;500&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Indie+Flower&family=Krona+One&family=Noto+Serif+HK:wght@200;300;400;500;600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Silkscreen:wght@400;700&display=swap');
+
 * {
     margin: 0%;
     padding: 0%;
@@ -11,6 +13,13 @@ body {
     width: 100%;
     display: block;
     position: relative;
+    overflow-x: hidden;
+}
+@font-face {
+    font-family: 'titelfont';
+    src: url(font/MonumentExtended-Regular.otf);
+    font-style: normal;
+    font-weight: 400;
 }
 @font-face {
     font-family: vogue;
@@ -270,6 +279,186 @@ h1 .des {
     border-radius: 3px;
 }
 
+/*us*/
+.section {
+    padding: 20px;
+    width: 100%;
+    background: white;
+    position: relative;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+}
+.title h1 {
+    font-size: 56px;
+    font-family: tomy;
+    font-weight: 100;
+}
+.title h3 {
+    margin-top: 40px;
+    font-size: 1.4em;
+    font-family: tomy;
+}
+.us .container {
+    width: 100%;
+    justify-items: center;
+    gap: 20px 0;
+    padding: 50px 0;
+}
+.us .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.us .container .card_us {
+    display: grid;
+    width: 300px;
+    height: auto;
+    justify-items: center;
+}
+.us .container .card_us .image {
+    width: 100%;
+}
+.us .container .card_us .image img {
+    width: 100%;
+
+    display: grid;
+    place-items: center;
+}
+.us .container .card_us .our_info {
+    width: 100%;
+}
+.us .container .card_us .our_info h3 {
+    font-family: tomy;
+    font-size: 1.1em;
+    padding: 15px 0;
+    font-weight: 600;
+}
+.us .container .card_us .our_info .media {
+    display: flex;
+    flex-direction: column;
+    line-height: 25px;
+}
+.us .container .card_us .our_info .media a,
+p {
+    font-family: vogue;
+    color: rgb(87, 87, 87);
+    font-size: 0.9em;
+}
+
+/*footer*/
+footer {
+    background: white;
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+}
+.footer-container {
+    background: #eae7e2;
+    width: 93%;
+    height: 93%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 90px -30px rgba(67, 67, 67, 0.477);
+    justify-content: space-between;
+}
+.footfirsthalf {
+    display: flex;
+    justify-content: space-between;
+    width: 93%;
+}
+.footer-container .first-part {
+    height: 30%;
+    width: 170px;
+    padding-top: 20px;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+.footer-container .first-part .social-media-icons {
+    color: #000000;
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-container .first-part .social-media-icons a ion-icon {
+    background: transparent;
+    font-size: 1.3em;
+    padding: 7px;
+    color: #000000;
+    border-radius: 50%;
+    border: 1px #000000 solid;
+    transition: 0.5s ease;
+}
+
+.footer-container .footer-up {
+    display: flex;
+    height: 35%;
+    width: 60%;
+    justify-content: space-around;
+    margin-right: 50px;
+    margin-top: 40px;
+}
+.footer-container .footer-up .second-part {
+    display: flex;
+    flex-direction: column;
+}
+.footer-container .footer-up .second-part h3 {
+    padding-bottom: 15px;
+    font-family: tomy;
+    font-size: 0.8em;
+    color: #000000;
+    letter-spacing: 2px;
+}
+.footer-container .footer-up .second-part p {
+    padding-bottom: 15px;
+    text-decoration: none;
+    font-family: tomy;
+    font-weight: 500;
+    color: #000000;
+    font-size: 0.9em;
+}
+
+.footer-container .footer-up .third-part {
+    display: flex;
+    flex-direction: column;
+}
+.footer-container .footer-up .third-part h3 {
+    padding-bottom: 15px;
+    font-family: tomy;
+    font-size: 0.8em;
+    color: #000000;
+    letter-spacing: 2px;
+}
+.footer-container .footer-up .third-part p {
+    padding-bottom: 15px;
+    text-decoration: none;
+    font-family: tomy;
+    font-weight: 500;
+    color: #000000;
+    font-size: 0.9em;
+}
+
+.footer-container .foot-titel {
+    margin-top: -10px;
+    display: block;
+}
+.footer-container .foot-titel h1 {
+    text-align: center;
+    font-family: vogue;
+    color: #000000;
+    font-size: 9em;
+    letter-spacing: 4px;
+}
+
+@media (max-width: 800px) {
+    .us .container {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 90px 0;
+    }
+}
 @media (max-width: 530px) {
     .logo {
         width: 40px;
@@ -325,148 +514,44 @@ h1 .des {
         height: 300px;
         object-fit: cover;
     }
-}
-
-/*us*/
-.section {
-    padding: 30px;
-    width: 100%;
-    background: white;
-    position: relative;
-}
-
-.title {
-    width: 100%;
-    text-align: center;
-}
-.title h1 {
-    font-size: 56px;
-    font-family: tomy;
-    font-weight: 100;
-}
-.title h3 {
-    margin-top: 40px;
-    font-size: 1.4em;
-    font-family: tomy;
-}
-.us .container {
-    width: 100%;
-    justify-items: center;
-    gap: 20px 0;
-    padding: 50px 0;
-}
-.us .container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-.us .container .card_us {
-    border: solid black 2px;
-    width: 290px;
-    height: 320px;
-    display: grid;
-    place-items: center;
-
-    position: relative;
-}
-.us .container .card_us:hover {
-    border: solid rgb(120, 119, 119) 2px;
-}
-.us .container .card_us:hover .image {
-    background: rgb(120, 119, 119);
-}
-.us .container .card_us:hover .image img {
-    -webkit-filter: drop-shadow(-3px 3px 0 white) drop-shadow(3px -3px 0 white) drop-shadow(-3px -3px 0 white);
-    filter: drop-shadow(3px 3px 0 white) drop-shadow(-3px 3px 0 white) drop-shadow(3px -3px 0 white) drop-shadow(-3px -3px 0 white);
-}
-
-.us .container .card_us .image {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    display: grid;
-    place-items: center;
-    position: relative;
-    transition: 0.3s all ease-in-out;
-}
-
-.us .container .card_us .image img {
-    width: 160%;
-    position: absolute;
-    top: -180px;
-    transition: 0.3s all ease-in-out;
-}
-.card_us:hover .our-info {
-    animation: 0.4s infomove;
-}
-@keyframes infomove {
-    0%,
-    100% {
-        transform: translateY(0rem);
+    .footer-container .first-part {
+        margin-left: 100px;
+        margin-top: -20px;
+        position: absolute;
     }
-    50% {
-        transform: translateY(-1em);
+
+    .footer-container .footer-up {
+        display: flex;
+        width: 100%;
+        margin-left: 20px;
+        margin-top: 150px;
     }
-}
 
-.our-info {
-    background: white;
-    box-shadow: 0px 0px 100px -30px rgba(0, 0, 0, 0.264);
-    width: 280px;
-    height: 220px;
-    left: 25%;
-    top: 50%;
-    z-index: 11;
-    position: absolute;
-    border-radius: 10px;
-    padding: 20px;
-}
-.name {
-    font-size: 1.16em;
-    padding-bottom: 15px;
-    color: black;
-    letter-spacing: 2px;
-    font-family: tomy;
-    font-weight: 700;
-}
-.our-info h3 {
-    font-size: 1em;
-    color: rgb(120, 119, 119);
-    font-family: tomy;
-    line-height: 27px;
-}
-.our-info .media {
-    width: 40%;
-    display: flex;
-    justify-content: space-around;
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
-}
-.our-info img {
-    width: 17px;
-    margin-top: 60px;
-}
-.our-info .post {
-    position: absolute;
-    width: 100%;
-    transform: rotate(-90deg);
-    top: -70%;
-    left: 31%;
-    font-family: tomy;
-    display: flex;
-    align-items: center;
-}
-.our-info .line {
-    background-color: black;
-    width: 30px;
-    height: 1px;
-    margin-right: 10px;
-}
+    .footer-container .footer-up .second-part {
+        padding-right: 60px;
+    }
 
-@media (max-width: 800px) {
-    .us .container {
-        grid-template-columns: repeat(1, 1fr);
-        gap: 90px 0;
+    .footer-container .footer-up .second-part h3 {
+        font-size: 0.7em;
+    }
+    .footer-container .footer-up .second-part p {
+        font-size: 0.8em;
+    }
+
+    .footer-container .footer-up .third-part {
+        padding-right: 60px;
+    }
+    .footer-container .footer-up .third-part h3 {
+        font-size: 0.7em;
+    }
+    .footer-container .footer-up .third-part p {
+        font-size: 0.8em;
+    }
+
+    .footer-container .foot-titel {
+        margin-top: 70px;
+    }
+    .footer-container .foot-titel h1 {
+        font-size: 5em;
     }
 }
