@@ -32,5 +32,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     setTimeout(function () {
         holder.style.display = 'none';
+        holder.style.visibility='hidden';
     }, 3000);
 });

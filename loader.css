@@ -10,37 +10,27 @@
     z-index: 9999;
     top: 0;
     left: 0;
-    background: #eae7e2;
+    background: #fff;
+}
+@font-face {
+    font-family: tomy;
+    src: url(fonts/MADE\ TOMMY\ Light_PERSONAL\ USE.otf);
 }
 
 .holder img {
-    width: 50px;
     position: absolute;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
 }
 
-.custom-loader {
-    width: 90px;
-    height: 90px;
-    --c: radial-gradient(farthest-side, #000000 92%, #0000);
-    background: var(--c) 50% 0, var(--c) 50% 100%, var(--c) 100% 50%, var(--c) 0 50%;
-    background-size: 10px 10px;
-    background-repeat: no-repeat;
-    animation: s8 1s infinite;
-    position: relative;
-}
-
-.custom-loader::before {
-    content: '';
+.holder h5{
     position: absolute;
-    inset: 0;
-    margin: 3px;
-    background: repeating-conic-gradient(#0000 0 35deg, #000000 0 90deg);
-    -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 3px), #000 0);
-    border-radius: 50%;
+    font-family: 'tomy';
+    letter-spacing: 1px;
+    color: #161616;
+    bottom:100px;
+    text-transform: capitalize;
 }
 
-@keyframes s8 {
-    100% {
-        transform: rotate(0.5turn);
-    }
-}
+
