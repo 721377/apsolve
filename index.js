@@ -8,13 +8,13 @@ const close3 = document.getElementById('close3');
 const close4 = document.getElementById('close4');
 
 function closen() {
-  nav.style.visibility = "hidden";
-  nav.style.opacity = "0";
+    nav.style.visibility = 'hidden';
+    nav.style.opacity = '0';
 }
 
-menu.onclick = function() {
-  nav.style.visibility = "visible";
-  nav.style.opacity = "1";
+menu.onclick = function () {
+    nav.style.visibility = 'visible';
+    nav.style.opacity = '1';
 };
 
 naclo.onclick = closen; // Remove parentheses
@@ -23,3 +23,14 @@ close1.onclick = closen;
 close2.onclick = closen;
 close3.onclick = closen;
 close4.onclick = closen;
+
+var holder = document.querySelector('.holder');
+
+// Wait for the DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function () {
+    holder.style.display = 'grid';
+
+    setTimeout(function () {
+        holder.style.display = 'none';
+    }, 3000);
+});
