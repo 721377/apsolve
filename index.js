@@ -35,3 +35,4 @@ document.addEventListener('DOMContentLoaded', function () {
         holder.style.visibility='hidden';
     }, 3000);
 });
+
