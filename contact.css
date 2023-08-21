@@ -1,0 +1,146 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+@font-face {
+    font-family: 'titelfont';
+    src: url(font/MonumentExtended-Regular.otf);
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: vogue;
+    src: url(fonts/NT\ Fabulous.otf);
+}
+
+@font-face {
+    font-family: tomy;
+    src: url(fonts/MADE\ TOMMY\ Light_PERSONAL\ USE.otf);
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+.section {
+    padding: 20px;
+    width: 100%;
+    position: relative;
+    height: fit-content;
+}
+.left {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    z-index: 99;
+}
+.contact .container {
+    display: flex;
+    height: 94vh;
+    width: 100%;
+}
+
+.contact .container .leftpart {
+    display: flex;
+    width: 50%;
+    position: relative;
+}
+.contact .container .leftpart h1 {
+    position: absolute;
+    color: black;
+    top: 130px;
+    left: 20px;
+    font-size: 4em;
+    font-family: tomy;
+}
+.contact .container .leftpart img {
+    position: absolute;
+    color: black;
+    top: 250px;
+    left: 90px;
+    width: 170px;
+}
+.contact .container .leftpart .links-botom {
+    align-items: center;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+
+.links-botom > h6 {
+    color: #000000;
+    font-family: tomy;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.contact .container .rightpart {
+    width: 50%;
+    position: relative;
+}
+
+.rightpart .info {
+    position: absolute;
+    top: 200px;
+    padding: 0 90px;
+}
+.rightpart .info p {
+    font-size: 1em;
+    font-family: vogue;
+    text-align: justify;
+}
+
+.rightpart .info .line {
+    width: 100%;
+    height: 1px;
+    background: black;
+    margin: 30px 0;
+}
+
+.rightpart .info .bottom {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-family: tomy;
+}
+.rightpart .info .bottom .general {
+    text-align: left;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    line-height: 25px;
+    padding-right: 70px;
+}
+.rightpart .info .bottom .media {
+    text-align: left;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    line-height: 25px;
+}
+.rightpart .info .bottom .media a,
+.general a {
+    text-decoration: none;
+    color: black;
+    font-size: 0.7em;
+    font-family: tomy;
+}
+.rightpart .info .bottom h1 {
+    font-size: 0.8em;
+}
+
+.rightpart .info .bottom .general p {
+    color: black;
+    font-size: 0.7em;
+    font-family: tomy;
+}
+.rightpart .info .bottom .general .group {
+    line-height: 10px;
+    margin-bottom: 10px;
+}

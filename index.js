@@ -32,5 +32,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
     setTimeout(function () {
         holder.style.display = 'none';
-    }, 3000);
+    }, 2000);
 });
