@@ -39,6 +39,12 @@ body {
     left: 20px;
     top: 20px;
     z-index: 99;
+    font-family: tomy;
+    font-weight: 100;
+    background: black;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
 }
 .contact .container {
     display: flex;
@@ -90,10 +96,21 @@ body {
     top: 200px;
     padding: 0 90px;
 }
-.rightpart .info p {
+.rightpart .info h2 {
+    font-size: 1.9em;
+    font-family: vogue;
+    text-align: justify;
+}
+.rightpart .info .a {
     font-size: 1em;
     font-family: vogue;
     text-align: justify;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+.rightpart .info .a svg {
+    margin-left: 10px;
 }
 
 .rightpart .info .line {
@@ -143,4 +160,33 @@ body {
 .rightpart .info .bottom .general .group {
     line-height: 10px;
     margin-bottom: 10px;
+}
+@media (max-width: 715px) {
+    .contact .container {
+        flex-direction: column;
+    }
+    .contact .container .rightpart,
+    .contact .container .leftpart {
+        width: 100%;
+        display: flex;
+    }
+    .contact .container .rightpart {
+        justify-content: center;
+    }
+    .contact .container .leftpart h1 {
+        position: relative;
+    }
+    .contact .container .leftpart img {
+        top: 80%;
+        left: 40%;
+        width: 70px;
+    }
+    .contact .container .leftpart .links-botom {
+        bottom: -850%;
+    }
+    .rightpart .info {
+        top: 200px;
+        padding: 0;
+        width: 80%;
+    }
 }
