@@ -5,6 +5,7 @@
     padding: 0%;
     box-sizing: border-box;
     text-decoration: none;
+    
 }
 
 html,
@@ -281,8 +282,11 @@ h1 .des {
 
 /*us*/
 .section {
-    padding: 20px;
+    padding: 0 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     width: 100%;
+    height: fit-content;
     background: white;
     position: relative;
     height: fit-content;
@@ -343,7 +347,7 @@ h1 .des {
 }
 .us .container .card_us .our_info .media a,
 p {
-    font-family: vogue;
+    font-family: tomy;
     color: rgb(87, 87, 87);
     font-size: 0.9em;
 }
@@ -363,7 +367,7 @@ footer {
     width: 93%;
     height: 93%;
     border-radius: 10px;
-    box-shadow: 0px 0px 90px -30px rgba(67, 67, 67, 0.477);
+    box-shadow: 0px 0px 20px -30px rgba(67, 67, 67, 0.33);
     justify-content: space-between;
 }
 .footfirsthalf {
