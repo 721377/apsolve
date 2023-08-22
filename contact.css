@@ -41,10 +41,7 @@ body {
     z-index: 99;
     font-family: tomy;
     font-weight: 100;
-    background: black;
-    padding: 10px 20px;
-    border-radius: 10px;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
 .contact .container {
     display: flex;
