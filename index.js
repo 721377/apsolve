@@ -24,15 +24,40 @@ close2.onclick = closen;
 close3.onclick = closen;
 close4.onclick = closen;
 
-var holder = document.querySelector('.holder');
 
-// Wait for the DOM to be fully loaded
-document.addEventListener('DOMContentLoaded', function () {
-    holder.style.display = 'grid';
 
-    setTimeout(function () {
-        holder.style.display = 'none';
-        holder.style.visibility='hidden';
-    }, 3000);
-});
 
+
+const numberElement = document.querySelector(".number");
+
+
+const tl = gsap.timeline({ repeat: -1 });
+tl.to(numberElement, {
+  duration: 0.5,
+  scaleX: 1.2,
+  scaleY: 1.2,
+  ease: "power2.inOut",
+})
+  .to(numberElement, {
+    duration: 0.5,
+    scaleX: 1,
+    scaleY: 1,
+    ease: "power2.inOut",
+  })
+  .to(numberElement, {
+    duration: 1,
+    textContent:"100%",
+    roundProps: "textContent",
+    ease: "power2.inOut",
+    onComplete: showContentPage,
+  });
+
+function showContentPage() {
+  gsap.to(".holder", {
+    duration: 0.5,
+    opacity: 0,
+    display: "none",
+    ease: "power2.inOut",
+  })
+
+}
