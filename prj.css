@@ -53,7 +53,6 @@ body {
     gap: 15px;
     overflow: hidden;
     overflow-y: scroll;
-    
 }
 .project-images::-webkit-scrollbar {
     width: 6px;
