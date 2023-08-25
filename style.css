@@ -5,7 +5,17 @@
     padding: 0%;
     box-sizing: border-box;
     text-decoration: none;
-    
+}
+.hidden {
+    opacity: 0;
+    transition: all 0.7s ease-in-out;
+    filter: blur(10px);
+    transform: translatex(-70%);
+}
+.show {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translatex(0%);
 }
 
 html,
@@ -36,7 +46,7 @@ body {
     position: relative;
     width: 100%;
     height: 100vh;
-    background-color: #ffffff;
+    background-color: #fff;
 }
 .logo {
     width: 50px;
@@ -48,25 +58,25 @@ body {
     height: 100%;
     object-fit: fill;
 }
-.home > .head {
+.head {
     position: fixed;
     top: 0;
     width: 100%;
     height: 60px;
-    background-color: #ffffff77;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0px 20px;
     z-index: 1111;
 }
+
 .menu {
     position: relative;
     font-family: 'tomy';
     font-size: 16px;
     text-transform: capitalize;
     letter-spacing: 1px;
-    color: #0a0a0a;
+    color: #161616;
     cursor: pointer;
 }
 nav {
@@ -159,11 +169,12 @@ nav > .links > .close {
     font-size: 30px;
 }
 .main {
-    margin-top: 100px;
+    padding-top: 90px;
     position: relative;
     width: 100%;
     height: 100%;
     display: flex;
+    background-color: #fff;
     align-items: center;
     flex-direction: column;
     justify-content: center;
@@ -172,7 +183,8 @@ nav > .links > .close {
 .main > .hero-img {
     position: relative;
     height: 38%;
-    width: 96%;
+    width: 95%;
+    margin-top: 60px;
 }
 .hero-img img {
     height: 100%;
@@ -250,15 +262,21 @@ h1 .des {
     display: flex;
     flex-direction: column;
     align-items: start;
+
     border-bottom: 1px solid #161616a4;
     padding-bottom: 16px;
 }
+.img-text:nth-child(2),
+.img-text:nth-child(4) {
+    transition-delay: 200ms;
+}
+
 .img-text h1 {
     position: relative;
     width: 100%;
     margin-top: 15px;
     font-family: tomy;
-    color: #e9e9e9;
+    color: #000000;
     mix-blend-mode: difference;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -279,6 +297,68 @@ h1 .des {
     object-fit: cover;
     border-radius: 3px;
 }
+/* about */
+.about{
+    position: relative;
+    width: 100%;
+    height: 110vh;
+    margin-top: 90px;
+    background-color: #fff;
+    overflow: hidden;
+}
+.ball{
+    position: absolute;
+    left: 50%;top:50%;translate:-50% -50%;
+    border-radius: 50%;
+    height:350px;
+    aspect-ratio: 1;
+    background: linear-gradient(to right, #ffc1e4 , #c13885);
+    animation: rotate 20s infinite;
+}
+#text{
+    width:50%;
+}
+#text h2{
+    font-size: 25px;
+    font-family: 'tomy';
+    text-transform: uppercase;
+    color:#161616;
+    letter-spacing: 1px;
+}
+#text h3{
+    color: #161616;font-size: 15px;
+    font-family: 'tomy';
+    letter-spacing: 2px;
+    margin-top:20px;
+}
+@keyframes rotate{
+    from{
+        rotate: 0deg;
+    }50%{
+        scale:1 1.5;
+    }to{
+        rotate: 360deg;
+    }
+}
+
+img{
+    width:300px;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+.glass{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(200px);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0px 20px;
+   
+}
+
 
 /*us*/
 .section {
@@ -297,7 +377,7 @@ h1 .des {
     text-align: center;
 }
 .title h1 {
-    font-size: 56px;
+    font-size: 76px;
     font-family: tomy;
     font-weight: 100;
 }
@@ -321,6 +401,10 @@ h1 .des {
     width: 300px;
     height: auto;
     justify-items: center;
+}
+
+.us .container .card_us:nth-child(2) {
+    transition-delay: 200ms;
 }
 .us .container .card_us .image {
     width: 100%;
@@ -476,6 +560,9 @@ footer {
     nav > .links > a {
         font-size: 16px;
     }
+    .main{
+        padding-top: 30px;
+    }
     .main .text {
         margin-top: 0;
         width: 95%;
@@ -519,6 +606,39 @@ footer {
         height: 300px;
         object-fit: cover;
     }
+    .ball{
+        height:280px;
+        aspect-ratio: 1;
+        
+    }
+    #text{
+        width:90%;
+        margin-top:30px;
+    }
+    #text h2{
+        font-size: 18px;
+        
+    }
+    #text h3{
+        color: #161616;font-size: 13px;
+        font-family: 'tomy';
+        letter-spacing: 2px;
+    }
+    
+    img{
+        width:140px;
+        aspect-ratio: 1;
+        object-fit: cover;
+    }
+    .glass{
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content:center;
+       
+    }
+}
+
     .footer-container .first-part {
         margin-left: 100px;
         margin-top: -20px;
@@ -559,4 +679,4 @@ footer {
     .footer-container .foot-titel h1 {
         font-size: 5em;
     }
-}
+
