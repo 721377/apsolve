@@ -16,6 +16,11 @@
     font-family: tomy;
     src: url(fonts/MADE\ TOMMY\ Light_PERSONAL\ USE.otf);
 }
+@font-face {
+    font-family: vogue;
+    src: url(fonts/NT\ Fabulous.otf);
+}
+
 
 .holder img {
     position: absolute;
@@ -32,5 +37,4 @@
     bottom:100px;
     text-transform: capitalize;
 }
-
 

@@ -9,9 +9,16 @@
         <link rel="stylesheet" href="loader.css" />
         <script defer src="website.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+            integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
         <link rel="icon" href="img/logo.png" type="image/x-icon" />
     </head>
-    <body>
+    <body class="body">
         <section class="home">
             <header class="head">
                 <a href=""
@@ -35,7 +42,7 @@
                 </div>
             </nav>
             <div class="main">
-                <div class="text hidden">
+                <div class="text">
                     <h1>UI/UX <span class="des">Designers</span></h1>
 
                     <div class="text1">
@@ -44,7 +51,7 @@
                     </div>
                     <h1>developers</h1>
                 </div>
-                <div class="hero-img hidden"><img src="img/hero-image.webp" alt="" /></div>
+                <div class="hero-img"><img src="img/hero-image.webp" alt="" /></div>
             </div>
         </section>
 
@@ -68,6 +75,20 @@
                 <div class="img-text hidden2">
                     <a href=""> <img class="imgs" src="img/prj2.jpg" alt="Image 3" /></a>
                     <h1>nimora69 <span>(4)</span></h1>
+                </div>
+            </div>
+        </section>
+        <section class="about">
+            <div class="ball" id="ball"></div>
+            <div class="glass">
+                <img src="img/logo.png" alt="" />
+                <div id="text">
+                    <h2>Apsolv</h2>
+                    <h3>
+                        Apsolv is a forward-thinking digital solutions company that specializes in creating transformative online
+                        experiences for businesses of all sizes. With a passionate team of skilled designers, developers, and strategists,
+                        Apsolv is committed to delivering innovative solutions that empower businesses to thrive in the digital landscape.
+                    </h3>
                 </div>
             </div>
         </section>
@@ -145,6 +166,54 @@
         </div>
 
         <script src="index.js"></script>
+
+        <script>
+            const ball = document.getElementById('ball');
+            document.body.onpointermove = (event) => {
+                const { clientX, clientY } = event;
+                ball.animate(
+                    {
+                        left: `${clientX}px`,
+                        top: `${clientY}px`,
+                    },
+                    { duration: 3000, fill: 'forwards' }
+                );
+            };
+        </script>
+
+        <script>
+            // Wrap your code inside a DOMContentLoaded event to ensure the DOM is fully loaded before executing scripts
+            document.addEventListener('DOMContentLoaded', function () {
+                // Split the text content of the <h3> element into individual characters
+                const text = document.querySelector('#text > h3');
+                text.innerHTML = text.textContent
+                    .split('')
+                    .map((char) => {
+                        return `<span>${char}</span>`;
+                    })
+                    .join('');
+
+                // Define the animation timeline using GSAP
+                const tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: '#text',
+                        start: 'top 80%',
+                        end: 'bottom top',
+
+                        scrub: true,
+                    },
+                });
+
+                // Animate each span element with a stagger effect
+                tl.from('#text > h3 > span', {
+                    y: '100%', // Start position
+                    opacity: 0, // Start opacity
+                    stagger: 0.5,
+                    color: '#161616',
+                    ease: 'power2.out', // Easing function
+                });
+            });
+        </script>
 
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

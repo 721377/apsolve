@@ -24,9 +24,18 @@ close2.onclick = closen;
 close3.onclick = closen;
 close4.onclick = closen;
 
+
+
+
+
+
+
+
+
+
 var holder = document.querySelector('.holder');
 
-// Wait for the DOM to be fully loaded
+
 document.addEventListener('DOMContentLoaded', function () {
     holder.style.display = 'grid';
 
@@ -34,3 +43,5 @@ document.addEventListener('DOMContentLoaded', function () {
         holder.style.display = 'none';
     }, 2000);
 });
+
+
