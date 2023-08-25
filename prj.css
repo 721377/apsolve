@@ -4,7 +4,17 @@
     box-sizing: border-box;
     text-decoration: none;
 }
-
+.hidden {
+    opacity: 0;
+    transition: all 0.7s ease-in-out;
+    filter: blur(10px);
+    transform: translatex(-70%);
+}
+.show {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translatex(0%);
+}
 html,
 body {
     height: 100%;
@@ -24,18 +34,18 @@ body {
     src: url(fonts/MADE\ TOMMY\ Light_PERSONAL\ USE.otf);
 }
 
-.main{
+.main {
     position: relative;
-    width:100%;
-    height:100vh;
+    width: 100%;
+    height: 100vh;
     padding: 0 5px;
     display: flex;
     align-items: center;
     background-color: #fff;
 }
-.project-images{
+.project-images {
     position: relative;
-    width:65%;
+    width: 65%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -48,79 +58,79 @@ body {
     width: 6px;
     background-color: rgb(119, 119, 119);
 }
-.project-images::-webkit-scrollbar-thumb{
+.project-images::-webkit-scrollbar-thumb {
     width: 6px;
-    height:10px;
+    height: 10px;
     background-color: #2c2c2c;
 }
-.project-images img{
+.project-images img {
     position: relative;
-    width:100%;
+    width: 100%;
     object-fit: cover;
 }
-.prj-desc{
+.prj-desc {
     position: relative;
-    width:35%;
+    width: 35%;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #e6e6e6;
 }
-.up-desc{
+.up-desc {
     position: absolute;
-    top:7px;
+    top: 7px;
     margin: auto;
     font-size: 20px;
-    color:#fff;
+    color: #fff;
     display: none;
     transition: 0.4s ease-in-out;
 }
-.des-head{
+.des-head {
     position: absolute;
-    top:15px;
+    top: 15px;
     font-family: 'vogue';
     font-size: 45px;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
-.des-body{
-    width:90%;
+.des-body {
+    width: 90%;
     margin-top: 200px;
 }
-.des-body p{
+.des-body p {
     font-size: 14px;
-    color:#2c2c2c;
+    color: #2c2c2c;
     font-family: 'tomy';
     letter-spacing: 1px;
     width: 100%;
 }
-.email-us{
+.email-us {
     display: inline-block;
-    position:relative;
+    position: relative;
     margin-top: 50px;
     font-size: 14px;
-    color:#a7a699;
+    color: #a7a699;
     letter-spacing: 1px;
     font-family: 'tomy';
 }
-.des-foter{
+.des-foter {
     position: absolute;
-    bottom:20px;
-    width:100%;
+    bottom: 20px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0px 20px;
 }
-.back-home{
-    width:80px;
+.back-home {
+    width: 80px;
     height: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #161616;
-    color:#fff;
+    color: #fff;
     font-family: 'tomy';
     letter-spacing: 1px;
     font-weight: lighter;
@@ -129,33 +139,32 @@ body {
     border-radius: 10px;
     cursor: pointer;
 }
-.next-back{
-    width:60px;
+.next-back {
+    width: 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-size: 18px;
 }
-.next-back a{
-    color:#161616;
+.next-back a {
+    color: #161616;
 }
 
 @media (max-width: 820px) {
-    .project-images{
+    .project-images {
         position: relative;
-        width:100%;
-    
+        width: 100%;
     }
     .project-images::-webkit-scrollbar {
-       display: none;
+        display: none;
     }
-   
-    .prj-desc{
+
+    .prj-desc {
         position: absolute;
         bottom: 0;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
-        width:100%;
+        width: 100%;
         height: 100px;
         overflow: hidden;
         background-color: #78787855;
@@ -163,85 +172,73 @@ body {
         -webkit-backdrop-filter: blur(8px);
         transition: 0.4s ease-in-out;
     }
-    .des-head{
+    .des-head {
         position: absolute;
-        top:40px;
+        top: 40px;
         font-size: 50px;
-        color:#fff
+        color: #fff;
     }
-    .des-body{
-        width:60%;
+    .des-body {
+        width: 60%;
         margin-top: 180px;
-       
     }
-    .des-body p{
+    .des-body p {
         font-size: 16px;
-        color:#fff
+        color: #fff;
     }
-    .email-us{
+    .email-us {
         margin-top: 70px;
-        font-size: 14px;  
-        letter-spacing: 2px; 
-        color:#fff
+        font-size: 14px;
+        letter-spacing: 2px;
+        color: #fff;
     }
-    .des-foter{
-        position:relative;
+    .des-foter {
+        position: relative;
         margin-top: 200px;
-        color:#fff
-    
+        color: #fff;
     }
-    .back-home{
-        width:70px;
+    .back-home {
+        width: 70px;
         height: 30px;
         font-size: 14px;
         background-color: #fff;
-        color:#161616
+        color: #161616;
     }
-    .next-back a{
-        color:#FFF;
+    .next-back a {
+        color: #fff;
     }
-    .up-desc{
+    .up-desc {
         display: block;
     }
-
-   
 }
 
 @media (max-width: 530px) {
-    .project-images{
+    .project-images {
         position: relative;
-        width:100%;
-    
+        width: 100%;
     }
     .project-images::-webkit-scrollbar {
-       display: none;
+        display: none;
     }
-   
-   
-    .des-head{
+
+    .des-head {
         position: absolute;
-        top:40px;
+        top: 40px;
         font-size: 35px;
-        color:#fff
+        color: #fff;
     }
-    .des-body{
-        width:90%;
+    .des-body {
+        width: 90%;
         margin-top: 160px;
-       
     }
-    .des-body p{
+    .des-body p {
         font-size: 14px;
-      
     }
-    .email-us{
+    .email-us {
         margin-top: 50px;
-        
     }
-    .des-foter{
-        position:relative;
+    .des-foter {
+        position: relative;
         margin-top: 140px;
-    
     }
-   
- 
 }

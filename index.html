@@ -13,12 +13,13 @@
     </head>
     <body>
         <section class="home">
-            <div class="head">
+            <header class="head">
                 <a href=""
                     ><div class="logo"><img src="img/logo.png" alt="" srcset="" /></div
                 ></a>
                 <div class="menu">menu</div>
-            </div>
+            </header>
+
             <nav>
                 <div class="links">
                     <div class="close">close</div>
@@ -48,23 +49,23 @@
         </section>
 
         <section class="project" id="project">
-            <h1>projects</h1>
+            <h1 class="hidden2">projects</h1>
             <div class="slider-container">
-                <div class="img-text hidden">
+                <div class="img-text hidden2">
                     <a href=""><video class="imgs" src="img/artex.mp4" loop autoplay muted></video></a>
                     <h1>Artex <span>(1)</span></h1>
                 </div>
 
-                <div class="img-text hidden">
+                <div class="img-text hidden2">
                     <a href=""><img class="imgs" src="img/prj2.jpg" alt="Image 3" /></a>
                     <h1>home | Rietveld Projects <span>(2)</span></h1>
                 </div>
 
-                <div class="img-text hidden">
+                <div class="img-text hidden2">
                     <a href=""> <video class="imgs" src="img/prj2.mp4" loop autoplay muted></video></a>
                     <h1>jgaronzi | 1925 <span>(3)</span></h1>
                 </div>
-                <div class="img-text hidden">
+                <div class="img-text hidden2">
                     <a href=""> <img class="imgs" src="img/prj2.jpg" alt="Image 3" /></a>
                     <h1>nimora69 <span>(4)</span></h1>
                 </div>
@@ -72,7 +73,7 @@
         </section>
         <section class="us section" id="us">
             <div class="title">
-                <h1>Meet us</h1>
+                <h1 class="hidden">Meet us</h1>
             </div>
             <div class="container">
                 <div class="card_us hidden">
@@ -106,7 +107,7 @@
             </div>
         </section>
 
-        <footer class="hidden">
+        <footer class="hidden" id="head">
             <div class="footer-container">
                 <div class="footfirsthalf">
                     <div class="first-part">
@@ -147,5 +148,15 @@
 
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script>
+            //hadel the head scroll
+            document.addEventListener('DOMContentLoaded', function () {
+                window.addEventListener('scroll', function () {
+                    console.log('hamza');
+                    var header = document.getElementById('head');
+                    header.classList.toggle('sticky', window.scrollY > 0);
+                });
+            });
+        </script>
     </body>
 </html>
