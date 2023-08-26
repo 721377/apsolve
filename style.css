@@ -19,7 +19,7 @@
 }
 .hidden2 {
     opacity: 0;
-    transition: all 0.7s ease-in-out;
+    transition:all 0.7s ease-in-out;
     filter: blur(10px);
     transform: translateY(50%);
 }
@@ -300,10 +300,9 @@ h1 .des {
     font-weight: lighter;
 }
 
-.img-text img,
-.img-text video {
+.img-text .imgs{
     position: relative;
-    width: 100%;
+    width: 500px;
     height: 330px;
     margin: auto;
     object-fit: cover;
