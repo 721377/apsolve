@@ -430,6 +430,11 @@ h1 .des {
     width: 100%;
     display: grid;
     place-items: center;
+    filter: grayscale(90%);
+    transition: 0.3s ease;
+}
+.us .container .card_us .image:hover img {
+    filter:none;
 }
 .us .container .card_us .our_info {
     width: 100%;
@@ -463,9 +468,9 @@ footer {
     padding: 30px 0;
 }
 .footer-container {
-    background: #eae7e2;
-    width: 93%;
-    height: 93%;
+    background: #000;
+    width: 96%;
+    height: 98%;
     border-radius: 10px;
     box-shadow: 0px 0px 20px -30px rgba(67, 67, 67, 0.33);
     justify-content: space-between;
@@ -483,7 +488,7 @@ footer {
     margin-top: 20px;
 }
 .footer-container .first-part .social-media-icons {
-    color: #000000;
+    color: #fff;
     padding-top: 30px;
     display: flex;
     justify-content: space-between;
@@ -492,9 +497,9 @@ footer {
     background: transparent;
     font-size: 1.3em;
     padding: 7px;
-    color: #000000;
+    color: #fff;
     border-radius: 50%;
-    border: 1px #000000 solid;
+    border: 1px #fff solid;
     transition: 0.5s ease;
 }
 
@@ -514,7 +519,7 @@ footer {
     padding-bottom: 15px;
     font-family: tomy;
     font-size: 0.8em;
-    color: #000000;
+    color: #fff;
     letter-spacing: 2px;
 }
 .footer-container .footer-up .second-part p {
@@ -522,7 +527,7 @@ footer {
     text-decoration: none;
     font-family: tomy;
     font-weight: 500;
-    color: #000000;
+    color: #fff;
     font-size: 0.9em;
 }
 
@@ -534,7 +539,7 @@ footer {
     padding-bottom: 15px;
     font-family: tomy;
     font-size: 0.8em;
-    color: #000000;
+    color: #fff;
     letter-spacing: 2px;
 }
 .footer-container .footer-up .third-part p {
@@ -542,7 +547,7 @@ footer {
     text-decoration: none;
     font-family: tomy;
     font-weight: 500;
-    color: #000000;
+    color: #fff;
     font-size: 0.9em;
 }
 
@@ -553,7 +558,7 @@ footer {
 .footer-container .foot-titel h1 {
     text-align: center;
     font-family: vogue;
-    color: #000000;
+    color: #fff;
     font-size: 9em;
     letter-spacing: 4px;
 }
@@ -602,7 +607,7 @@ footer {
     }
     .img-text {
         position: relative;
-        width: 320px;
+        width: 98%;
         height: 370px;
     }
     .img-text h1 {
@@ -619,6 +624,42 @@ footer {
         height: 300px;
         object-fit: cover;
     }
+
+    .ball{
+        height:280px;
+        aspect-ratio: 1;
+        
+    }
+    #text{
+        width:90%;
+        position: absolute;
+        top:400px;
+    }
+    #text h2{
+        font-size: 18px;
+        
+    }
+    #text h3{
+        color: #161616;font-size: 13px;
+        font-family: 'tomy';
+        letter-spacing: 2px;
+    }
+    
+    .glass img{
+        width:140px;
+        aspect-ratio: 1;
+        object-fit: cover;
+        margin-top: 30px;
+    }
+    .glass{
+        position:relative;
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        
+       
+    }
+
     .footer-container .first-part {
         margin-left: 100px;
         margin-top: -20px;
