@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Giopato & Coombes
+        </title>
+        <link rel="stylesheet" href="prj.css" />
+        <link rel="stylesheet" href="loader.css" />
+        <script defer src="website.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+            integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+    </head>
+    <body>
+        <section class="main">
+            <div class="project-images" id="prj">
+                <img class="block" src="img/prj5-1.jpg" alt="" srcset="" />
+                <video class="block" src="img/prj5-2.mp4" alt="" srcset="" loop autoplay muted></video>
+                <img class="block" src="img/prj5-3.jpg" alt="" srcset="" />
+                <img class="block" src="img/prj5-4.png" alt="" srcset="" />
+                <video class="block" src="img/prj5-6.mp4" alt="" srcset="" loop autoplay muted></video>
+                
+                
+            </div>
+            <div class="prj-desc">
+                <div class="up-desc"><i class="bi bi-caret-up-fill"></i></div>
+                <div class="des-head">Giopato & Coombes  </div>
+                <div class="des-body">
+                    <p>
+                        Introducing Closet Creation, the foremost destination for crafting exquisite closets where contemporary finesse merges seamlessly with enduring sophistication, delivering an unmatched virtual organization experience. 
+                        Immerse yourself in an intricately tailored website that not only guarantees to enthrall your senses but also adds a hint of individuality through captivating animations and cutting-edge visuals.
+                         Every interaction with our interface unveils an array of organizational wonders, accompanied by inventive design elements that redefine the art of closet curation.
+                    </p>
+                    <a href="" class="email-us">apsolve.service@gmail.com</a>
+                </div>
+                <div class="des-foter">
+                    <a href="index.html"><div class="back-home">home</div></a>
+                    <div class="next-back">
+                        <a href="prj3.html"><i class="bi bi-arrow-left"></i></a>
+                        <a href="prj1.html"><i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            var holder = document.querySelector('.holder');
+
+            // Wait for the DOM to be fully loaded
+            document.addEventListener('DOMContentLoaded', function () {
+                holder.style.display = 'grid';
+
+                setTimeout(function () {
+                    holder.style.display = 'none';
+                }, 2000);
+            });
+        </script>
+
+        <script>
+            var dec = document.querySelector('.prj-desc');
+            var up = document.querySelector('.up-desc');
+
+            up.onclick = function () {
+                if (dec.style.height == '100px' && up.style.rotate == 'none') {
+                    dec.style.height = '65%';
+                    up.style.rotate = '180deg';
+                } else {
+                    dec.style.height = '100px';
+                    up.style.rotate = 'none';
+                }
+            };
+        </script>
+
+        <script>
+            const tl = gsap.timeline();
+            tl.from('.block', {
+                duration: 1.5,
+                opacity: 0,
+                y: '-100%',
+                skewY: 17,
+                stagger: {
+                    amount: 0.2,
+                },
+            });
+            tl.from(
+                '.prj-desc',
+                {
+                    duration: 1,
+                    opacity: 0,
+                    stagger: {
+                        amount: 0.26,
+                    },
+                },
+                '-=.5'
+            );
+        </script>
+    </body>
+</html>

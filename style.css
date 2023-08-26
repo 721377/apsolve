@@ -333,10 +333,11 @@ h1 .des {
     width: 50%;
 }
 #text h2 {
-    font-size: 25px;
-    font-family: 'tomy';
+    font-size: 30px;
+    font-family: 'vogue';
+    font-weight: lighter;
     text-transform: uppercase;
-    color: #161616;
+    color: #363636;
     letter-spacing: 1px;
 }
 #text h3 {
@@ -557,7 +558,7 @@ footer {
 .footer-container .foot-titel h1 {
     text-align: center;
     font-family: vogue;
-    color: #fff;
+    color: #ffc1e4;
     font-size: 9em;
     letter-spacing: 4px;
 }
