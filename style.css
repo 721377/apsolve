@@ -330,7 +330,7 @@ h1 .des {
     animation: rotate 20s infinite;
 }
 #text {
-    width: 50%;
+    width: 60%;
 }
 #text h2 {
     font-size: 30px;
@@ -360,7 +360,7 @@ h1 .des {
 }
 
 .about > img {
-    width: 300px;
+    width: 270px;
     aspect-ratio: 1;
     object-fit: cover;
 }
